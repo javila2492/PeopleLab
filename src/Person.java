@@ -6,6 +6,9 @@ public abstract class Person
         this.firstName = firstName;
         this.familyName = familyName;
     }
+
+    public abstract double getGPA();
+
     public abstract String toString();
     public String getFirstName()
     {
@@ -13,7 +16,7 @@ public abstract class Person
     }
     public void setFirstName(String firstName)
     {
-        this.firstName = firstName;
+            this.firstName = firstName;
     }
     public String getFamilyName()
     {
@@ -23,6 +26,8 @@ public abstract class Person
     {
         this.familyName = familyName;
     }
+
+
     public boolean equals(Person person)
     {
         if(this.firstName.equals(person.getFirstName()) &&
@@ -30,7 +35,7 @@ public abstract class Person
         {
             return true;
         }
-        else return false;
+            else return false;
     }
 }
 
