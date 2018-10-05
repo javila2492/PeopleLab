@@ -5,14 +5,13 @@ public class Student extends Person {
     private String firstName;
     private String familyName;
 
-    public Student(double gpa, int grade, int id)
+    public Student(double gpa, int grade, int id, String firstName, String familyName)
     {
-        super("Student");
+        super(firstName,familyName);
         this.gpa = gpa;
         this.grade = grade;
         this.id = id;
     }
-    @Override
     public double getGPA()
     {
         return gpa;

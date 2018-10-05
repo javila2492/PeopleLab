@@ -7,7 +7,6 @@ public abstract class Person
         this.familyName = familyName;
     }
 
-    public abstract double getGPA();
 
     public abstract String toString();
     public String getFirstName()
