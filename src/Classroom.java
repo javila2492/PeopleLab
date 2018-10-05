@@ -1,7 +1,7 @@
 public class Classroom
 {
-    public static Person[] students;
-    public static Person teacher;
+    Person[] students;
+    Person teacher;
 
     public Classroom(Person[] students,Person teacher)
     {
@@ -13,9 +13,23 @@ public class Classroom
     {
         this.teacher = teacher;
     }
-    public classAverage()
+    public double classAverage()
     {
-
+        double sum = 0.0;
+        for(Person Student : students)
+        {
+            Student += Student.getGPA();
+        }
+        return sum / students.length();
+    }
+    public void printClass()
+    {
+        System.out.println(teacher);
+        System.out.println(teacher.getSubject());
+        for(Person student : students)
+        {
+            System.out.println(student);
+        }
     }
 
 }
