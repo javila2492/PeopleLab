@@ -6,8 +6,6 @@ public abstract class Person
         this.firstName = firstName;
         this.familyName = familyName;
     }
-
-
     public abstract String toString();
     public String getFirstName()
     {
@@ -25,8 +23,6 @@ public abstract class Person
     {
         this.familyName = familyName;
     }
-
-
     public boolean equals(Person person)
     {
         if(this.firstName.equals(person.getFirstName()) &&

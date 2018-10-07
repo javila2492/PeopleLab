@@ -10,16 +10,18 @@ public class Teacher extends Person
         this.title = title;
     }
 
-    public String getSubject() {
+    public String getSubject()
+    {
         return subject;
     }
 
-    public void setSubject(String subject) {
+    public void setSubject(String subject)
+    {
         this.subject = subject;
     }
 
     public String toString()
     {
-        return title + ". " + getFamilyName();
+        return title + getFamilyName() + ", " + subject;
     }
 }

@@ -9,27 +9,27 @@ public class Classroom
         this.teacher = teacher;
     }
 
-    public String getSubject(Person teacher)
+    public Person getSubject(Person teacher)
     {
         this.teacher = teacher;
+        return teacher;
     }
     public double classAverage()
     {
         double sum = 0.0;
+        for(Person Student : this.students)
+        {
+            sum += ((Student)Student).getGPA();
+        }
+        return sum / students.length;
+    }
+    public String printClass()
+    {
+        String e = "";
         for(Person Student : students)
         {
-            Student += Student.getGPA();
+            e += Student.getFirstName() + " " + Student.getFamilyName() + ", ";
         }
-        return sum / students.length();
+        return teacher.toString()  + ", " + "Students: " + e + ", " + "Class Average: " + classAverage();
     }
-    public void printClass()
-    {
-        System.out.println(teacher);
-        System.out.println(teacher.getSubject());
-        for(Person student : students)
-        {
-            System.out.println(student);
-        }
-    }
-
 }
