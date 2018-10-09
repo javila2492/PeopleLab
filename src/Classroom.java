@@ -8,12 +8,6 @@ public class Classroom
         this.students = students;
         this.teacher = teacher;
     }
-
-    public Person getSubject(Person teacher)
-    {
-        this.teacher = teacher;
-        return teacher;
-    }
     public double classAverage()
     {
         double sum = 0.0;
@@ -30,6 +24,6 @@ public class Classroom
         {
             e += Student.getFirstName() + " " + Student.getFamilyName() + ", ";
         }
-        return teacher.toString()  + ", " + "Students: " + e + ", " + "Class Average: " + classAverage();
+        return "Teacher : " + teacher.toString() + "\n" + "Students : " + e + ", " + "\n" + "Class Average : " + classAverage();
     }
 }
